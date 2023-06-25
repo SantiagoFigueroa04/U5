@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preceptor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <img class="imagen" src="/static/img/logo_colegio.png" width="800" height="100">
+    <section>
+        <div id="contenedor">
+            <div class="central">
+                <section>
+                    <h1>Bienvenido, Preceptor</h1>
+                    <p value="{{ correo.id }}" class="nombre-preceptor">Nombre: {{ nombre }} {{ apellido }}</p>
+                </section>
+                    <a href="{{ url_for ('registrar_asistencia') }}" class="enlace">Registrar asistencia</a>
+                    <br><br>
+                    <a href="{{ url_for ('listar_asistencia') }}" class="enlace">Obtener informe de inasistenciasde un curso</a>
+                    <br><br>
+            </div>
+        </div>
+    </section>
+    <div class="centrado">
+        <a class="resaltar" href="{{ url_for ('inicio_sesion') }}">Iniciar Sesion como Preceptor y Tutor</a> 
+    </div>
+    <br>
+    <br>
+</body>
+</html>
